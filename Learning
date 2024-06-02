@@ -1,4 +1,4 @@
-I: Khai báo thư viện dùng lệnh #include
+I. Khai báo thư viện dùng lệnh #include
 		VD:
 		 #include <iostream>
 		  #include <string>
@@ -17,7 +17,7 @@ I: Khai báo thư viện dùng lệnh #include
 			<string.h>	String handling functions
 			<time.h>	Date time functions
 
-II: Biến và nhập xuất dữ liệu
+II. Biến và nhập xuất dữ liệu
 	1. Biến
 		Biến do ta đặt tên biến nên tránh các từ sau:void, for whike, do, double,..., ký tự đầu tiên là chữ cái và để sử dụng biến cần phải khai báo một hoặc nhiều   biến dùng "int"
 			VD: 
@@ -83,4 +83,17 @@ III.Các phép toán trong C++
             &=	Phép AND bit	C &= 2 tương đương với C = C & 2
             ^=	Phép OR loại trừ bit	C ^= 2 tương đương với C = C ^ 2
             |=	Phép OR bit.	C |= 2 tương đương với C = C | 2
-  
+IV.  Hàm if else
+	Cú pháp: if (điều kiện) {Code1 chạy khi điều kiện đúng} else {code2 chạy khi điệu kiện sai}
+ VD: hãy tìm số nhỏ hơn khi so sánh a và b 
+		#include <iostream>
+		int main()
+		{
+			int a, b;
+			std::cout << "Nhap so a " ;
+			std::cin >> a;
+			std::cout << "Nhap so b ";
+			std::cin >> b;
+			if (a < b) { std::cout << a ; }else { std::cout << b;
+			};
+		}
