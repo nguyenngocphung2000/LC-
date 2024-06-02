@@ -1,0 +1,7 @@
+echo "# LC-" >> README.md 
+git init 
+git add README.md 
+git commit -m "first commit" 
+git nhánh -M main 
+git remote add Origin https://github.com/nguyenngocphung2000/LC-.git
+ git đẩy -u nguồn gốc chính
