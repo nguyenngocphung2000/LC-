@@ -1,0 +1,86 @@
+I: Khai báo thư viện dùng lệnh #include
+		VD:
+		 #include <iostream>
+		  #include <string>
+
+
+	Các thư viện cơ bản 
+			<assert.h>	Program assertion functions
+			<ctype.h>	Character type functions
+			<locale.h>	Localization functions
+			<math.h>	Mathematics functions
+			<setjmp.h>	Jump functions
+			<signal.h>	Signal handling functions
+			<stdarg.h>	Variable arguments handling functions
+			<stdio.h>	Standard Input/Output functions
+			<stdlib.h>	Standard Utility functions
+			<string.h>	String handling functions
+			<time.h>	Date time functions
+
+II: Biến và nhập xuất dữ liệu
+	1. Biến
+		Biến do ta đặt tên biến nên tránh các từ sau:void, for whike, do, double,..., ký tự đầu tiên là chữ cái và để sử dụng biến cần phải khai báo một hoặc nhiều   biến dùng "int"
+			VD: 
+			int a;
+			int a, b, c;
+	2. Nhập xuất dữ liệu
+		Ta dùng lệnh std::cin  >> (giá trị) để nhập dữ liệu từ bàn phím
+		Ta dùng lệnh "std::cout << (những gì muốn xuất)" để xuất dữ liệu ra màn hình
+		Lưu ý: ngoài ra để xuất dữ liệu ta có thể dùng lệnh printf()
+			VD: để nhập giá trị a và hiện ra màn hình vào bằng bàn phím ta dùng code sau:
+					#include <iostream>
+					int main ()
+					{
+						int a;
+						std::cout << "Nhap vao gia tri a :" ;
+						std::cin >> a;
+						std::cout << "Gia tri cua a la: " << a ;
+						
+					}
+			Các kiểu dữ liệu thường gặp 
+			int số nguyên
+			float số thực
+			char ký tự
+			bool đúng/sai, 0/1
+        Lệnh xuống dòng sau mỗi code ta dùng std::endl
+             VD: 
+        				#include <iostream>
+        					int main ()
+        					{
+        						std::cout << "dong nay o tren" << std::endl;
+        						std::cout << "dong nay o duoi";
+        						
+        					}
+III.Các phép toán trong C++
+    1. Toán tử số học trong C++					                
+            +	    Cộng	                            
+            -	    Trừ	                              
+            *	    Nhân                                
+            /	    Chia lấy phần nguyên                    
+            %	    Chia lấy phần dư	                              
+            ++	    Lượng gia giá trị thêm 1 đơn vị	      
+            --	    Lượng giảm giá trị một đơn vị            
+    2. Toán tử quan hệ trong C++
+            ==	Kiểm tra nếu 2 toán hạng bằng nhau hay không. Nếu bằng thì điều kiện là true.	(A == B) là không đúng.
+            !=	Kiểm tra 2 toán hạng có giá trị khác nhau hay không. Nếu không bằng thì điều kiện là true.	(A != B) là true.
+            >	Kiểm tra nếu toán hạng bên trái có giá trị lớn hơn toán hạng bên phải hay không. Nếu lớn hơn thì điều kiện là true.	(A > B) là không đúng.
+            <	Kiểm tra nếu toán hạng bên trái nhỏ hơn toán hạng bên phải hay không. Nếu nhỏ hơn thì là true.	(A < B) là true.
+            >=	Kiểm tra nếu toán hạng bên trái có giá trị lớn hơn hoặc bằng giá trị của toán hạng bên phải hay không. Nếu đúng là true.	(A >= B) là không đúng.
+            <=	Kiểm tra nếu toán hạng bên trái có giá trị nhỏ hơn hoặc bằng toán hạng bên phải hay không. Nếu đúng là true.	(A <= B) là true.
+    3. Toán tử logic trong C++
+            &&	Được gọi là toán tử logic AND (và). Nếu cả hai toán tử đều có giá trị khác 0 thì điều kiện trở lên true.	(A && B) là false.
+            ||	Được gọi là toán tử logic OR (hoặc). Nếu một trong hai toán tử khác 0, thì điều kiện là true.	(A || B) là true.
+            !	Được gọi là toán tử NOT (phủ định). Sử dụng để đảo ngược lại trạng thái logic của toán hạng đó. Nếu điều kiện toán hạng là true thì phủ định nó sẽ là false.	!(A && B) là true.
+    5. Toán tử gán trong C++
+            =	Toán tử gán đơn giản. Gán giá trị toán hạng bên phải cho toán hạng trái.	C = A + B sẽ gán giá trị của A + B vào trong C
+            +=	Thêm giá trị toán hạng phải tới toán hạng trái và gán giá trị đó cho toán hạng trái.	C += A tương đương với C = C + A
+            -=	Trừ đi giá trị toán hạng phải từ toán hạng trái và gán giá trị này cho toán hạng trái.	C -= A tương đương với C = C - A
+            *=	Nhân giá trị toán hạng phải với toán hạng trái và gán giá trị này cho toán hạng trái.	C *= A tương đương với C = C * A
+            /=	Chia toán hạng trái cho toán hạng phải và gán giá trị này cho toán hạng trái.	C /= A tương đương với C = C / A
+            %=	Lấy phần dư của phép chia toán hạng trái cho toán hạng phải và gán cho toán hạng trái.	C %= A tương đương với C = C % A
+            <<=	Dịch trái toán hạng trái sang số vị trí là giá trị toán hạng phải.	C <<= 2 tương đương với C = C << 2
+            >>=	Dịch phải toán hạng trái sang số vị trí là giá trị toán hạng phải.	C >>= 2 tương đương với C = C >> 2
+            &=	Phép AND bit	C &= 2 tương đương với C = C & 2
+            ^=	Phép OR loại trừ bit	C ^= 2 tương đương với C = C ^ 2
+            |=	Phép OR bit.	C |= 2 tương đương với C = C | 2
+  
